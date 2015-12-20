@@ -69,4 +69,7 @@ for i=1:length(thermal_demand)
     price(i) =((thermal_demand(i)-thermal_supply(val-1))/(thermal_supply(val)-thermal_supply(val-1)))+(val-1);
 end
 x=1:365;
-plotyy(x,price,x,thermal_demand);
+plot(x,price);
+ylabel('Price (¤/MWh)');
+xlabel('Day of the year');
+xlim([1 365]);
